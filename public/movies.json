@@ -1,0 +1,23 @@
+[
+  {
+    "title": "The Matrix",
+    "overview": "A computer hacker learns that what most people perceive as reality is actually a simulation created by machines, and joins a rebellion to break free.",
+    "img": "/matrix.jpg",
+    "genres": [
+      "Martial Arts Movies",
+      "Sci-Fi & Fantasy",
+      "Cyberpunk",
+      "Action Sci-Fi & Fantasy"
+    ],
+    "moods": ["Mind-Bending", "Exciting"],
+    "year": 1999,
+    "length": 136,
+    "directors": ["Lilly Wachowski", "Lana Wachowski"],
+    "cast": [
+      "Keanu Reeves",
+      "Laurence Fishburne",
+      "Carrie-Anne Moss",
+      "Hugo Weaving"
+    ]
+  }
+]

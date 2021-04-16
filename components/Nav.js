@@ -3,6 +3,8 @@ import { useRouter } from 'next/router';
 import ActiveLink from './ActiveLink';
 import HomeIcon from '../icons/HomeIcon';
 import SoonIcon from '../icons/SoonIcon';
+import Search from '../icons/Search';
+import Download from '../icons/Download';
 import styles from '../styles/Nav.module.css';
 
 const Nav = () => {
@@ -37,12 +39,30 @@ const Nav = () => {
         </li>
         <li>
           <Link href="/">
-            <a>Buscar</a>
+            <ActiveLink href="/search" activeClassName={styles.active}>
+              <a className={styles.linkItem}>
+                <Search
+                  width="24"
+                  height="24"
+                  fill={router.pathname === '/search' ? '#fff' : '#686868'}
+                />
+                <span>Buscar</span>
+              </a>
+            </ActiveLink>
           </Link>
         </li>
         <li>
           <Link href="/">
-            <a>Descargas</a>
+            <ActiveLink href="/downloads" activeClassName={styles.active}>
+              <a className={styles.linkItem}>
+                <Download
+                  width="24"
+                  height="24"
+                  fill={router.pathname === '/downloads' ? '#fff' : '#686868'}
+                />
+                <span>Descargas</span>
+              </a>
+            </ActiveLink>
           </Link>
         </li>
       </ul>

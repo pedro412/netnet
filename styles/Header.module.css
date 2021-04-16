@@ -1,0 +1,21 @@
+.header {
+  position: fixed;
+  max-width: 500px;
+  z-index: 10;
+  width: 100%;
+}
+
+.logo {
+  padding: 16px;
+  height: 64px;
+}
+
+.list {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  max-width: 235px;
+  margin: auto;
+}
