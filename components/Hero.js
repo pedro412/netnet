@@ -1,3 +1,7 @@
+import InfoIcon from '../icons/InfoIcon';
+import PlusIcon from '../icons/PlusIcon';
+import IconButton from './IconButton';
+import PlayButton from './PlayButton';
 import styles from '../styles/Hero.module.css';
 
 const Hero = ({ movie }) => {
@@ -13,6 +17,19 @@ const Hero = ({ movie }) => {
               <li key={mood}>{mood}</li>
             ))}
           </ul>
+          <div className={styles.toolbar}>
+            <IconButton
+              icon={<PlusIcon width={24} height={24} fill="white" />}
+              text="Mi lista"
+              color="white"
+            />
+            <PlayButton text="Reproducir" />
+            <IconButton
+              icon={<InfoIcon width={24} height={24} fill="white" />}
+              text="Info"
+              color="white"
+            />
+          </div>
         </div>
       </div>
     </div>

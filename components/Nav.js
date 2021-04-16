@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import ActiveLink from './ActiveLink';
 import HomeIcon from '../icons/HomeIcon';
 import SoonIcon from '../icons/SoonIcon';
 import Search from '../icons/Search';
@@ -10,59 +9,55 @@ import styles from '../styles/Nav.module.css';
 const Nav = () => {
   const router = useRouter();
 
+  const isActiveLink = (path) => {
+    if (router.pathname === path) {
+      return '#fff';
+    }
+
+    return '#686868';
+  };
+
   return (
     <nav className={styles.nav}>
       <ul className={styles.navbar}>
         <li>
-          <ActiveLink href="/" activeClassName={styles.active}>
+          <Link href="/">
             <a className={styles.linkItem}>
-              <HomeIcon
-                width="24"
-                height="24"
-                fill={router.pathname === '/' ? '#fff' : '#686868'}
-              />
-              <span>Inicio</span>
+              <HomeIcon width="24" height="24" fill={isActiveLink('/')} />
+              <span style={{ color: isActiveLink('/') }}>Inicio</span>
             </a>
-          </ActiveLink>
+          </Link>
         </li>
         <li>
-          <ActiveLink href="/coming-soon" activeClassName={styles.active}>
+          <Link href="/coming-soon">
             <a className={styles.linkItem}>
               <SoonIcon
                 width="24"
                 height="24"
-                fill={router.pathname === '/coming-soon' ? '#fff' : '#686868'}
+                fill={isActiveLink('/coming-soon')}
               />
               <span>Proximamente</span>
             </a>
-          </ActiveLink>
-        </li>
-        <li>
-          <Link href="/">
-            <ActiveLink href="/search" activeClassName={styles.active}>
-              <a className={styles.linkItem}>
-                <Search
-                  width="24"
-                  height="24"
-                  fill={router.pathname === '/search' ? '#fff' : '#686868'}
-                />
-                <span>Buscar</span>
-              </a>
-            </ActiveLink>
           </Link>
         </li>
         <li>
-          <Link href="/">
-            <ActiveLink href="/downloads" activeClassName={styles.active}>
-              <a className={styles.linkItem}>
-                <Download
-                  width="24"
-                  height="24"
-                  fill={router.pathname === '/downloads' ? '#fff' : '#686868'}
-                />
-                <span>Descargas</span>
-              </a>
-            </ActiveLink>
+          <Link href="/search">
+            <a className={styles.linkItem}>
+              <Search width="24" height="24" fill={isActiveLink('/search')} />
+              <span>Buscar</span>
+            </a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/downloads">
+            <a className={styles.linkItem}>
+              <Download
+                width="24"
+                height="24"
+                fill={isActiveLink('/downloads')}
+              />
+              <span>Descargas</span>
+            </a>
           </Link>
         </li>
       </ul>

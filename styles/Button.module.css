@@ -1,0 +1,33 @@
+.playButton {
+  background-color: var(--white);
+  color: var(--black);
+  width: 118px;
+  height: 32px;
+  font-size: 12px;
+  border: none;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.playButton svg {
+  margin-right: 4px;
+}
+
+.iconButton {
+  border: none;
+  width: 38px;
+  height: 43px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.iconButton span {
+  font-size: 11.2px;
+}
